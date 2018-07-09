@@ -13,7 +13,7 @@
 
 ## Requirements
 
-* [libxm2](http://www.xmlsoft.org/) must be installed to compile the *dep-tree* system, including the source libraries (header files)
+* [libxml2](http://www.xmlsoft.org/) must be installed to compile the *dep-tree* system, including the source libraries (header files)
   * on Ubuntu the most convenient way is to install the package `libxml2-dev`: `sudo apt install libxml2-dev`.
 * [CRF++](https://taku910.github.io/crfpp/) must be installed and accessible via `PATH`
 * [Wapiti](https://wapiti.limsi.fr/) must be installed and accessible via `PATH`
