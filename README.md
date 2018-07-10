@@ -11,6 +11,19 @@
 * Our paper will be published in August, coming soon.
 
 
+
+## Description
+
+*(This short description assumes that the reader is familiar with the task; if not, please see link above)*
+
+This system attempts to exploit the dependency tree structure of the
+sentences in order to identify MWEs. This is achieved by training a
+tree-structured CRF model which takes into account conditional
+dependencies between the nodes of the tree (node-parent and possibly
+node-next sibling). The system is also trained to predict MWE
+categories. The tree-structured CRF software used is [XCRF](http://treecrf.gforge.inria.fr/).
+
+
 ## Requirements
 
 * [libxml2](http://www.xmlsoft.org/) must be installed to compile the *dep-tree* system, including the source libraries (header files)
@@ -18,7 +31,7 @@
 * [CRF++](https://taku910.github.io/crfpp/) must be installed and accessible via `PATH`
 * [Wapiti](https://wapiti.limsi.fr/) must be installed and accessible via `PATH`
 * The shared task data can be downloaded or cloned from https://gitlab.com/parseme/sharedtask-data
-* [xcrf](http://treecrf.gforge.inria.fr/) is also required but provided in this repository
+* [XCRF](http://treecrf.gforge.inria.fr/) is also required but provided in this repository
 
   
   
