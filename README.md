@@ -18,6 +18,7 @@
 * [CRF++](https://taku910.github.io/crfpp/) must be installed and accessible via `PATH`
 * [Wapiti](https://wapiti.limsi.fr/) must be installed and accessible via `PATH`
 * The shared task data can be downloaded or cloned from https://gitlab.com/parseme/sharedtask-data
+* [xcrf](http://treecrf.gforge.inria.fr/) is also required but provided in this repository
 
   
   
