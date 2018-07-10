@@ -9,7 +9,7 @@ progName=$(basename "$BASH_SOURCE")
 trainFile=
 testFile=
 #force=0
-xcrfDir="xcrf-src-1.0"
+xcrfDir="xcrf-1.0"
 javaOpts="-Xms2g -Xmx2g"
 
 

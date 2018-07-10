@@ -1,0 +1,17 @@
+
+attributes=upos,deprel,lemma
+cliqueLevel=2 3
+neighbourhoods=self::TOKEN,parent::TOKEN,child::TOKEN,following-sibling::TOKEN,preceding-sibling::TOKEN
+minFreqFeature=2
+maxNbTests=1
+selectN=50000
+selectMethod=binary_split cond_entropy
+weightClique=0
+
+
+xcrfLabels=BIO IO
+methodCateg=none indep
+overlapKillSmallestExpr=0
+
+colNames=id,form,lemma,upos,xpos,feats,head,deprel,deps,misc
+categories=IAV,IRV,LS.ICV,LVC.cause,LVC.full,MVC,VID,VPC.full,VPC.semi

@@ -1,0 +1,19 @@
+
+attributes=upos,deprel,lemma
+cliqueLevel=2 3
+neighbourhoods=self::TOKEN,parent::TOKEN,child::TOKEN,following-sibling::TOKEN,preceding-sibling::TOKEN self::TOKEN,parent::TOKEN,child::TOKEN,following-sibling::TOKEN,preceding-sibling::TOKEN,ancestor::TOKEN,following-sibling::TOKEN[1],preceding-sibling::TOKEN[1],following-sibling::TOKEN[2],preceding-sibling::TOKEN[2],descendant::TOKEN
+minFreqFeature=2
+maxNbTests=1 2
+selectN=30000
+selectMethod=max_freq binary_split cond_entropy cond_entropy_clique
+weightClique=0 1
+
+
+xcrfLabels=BIO IO BILOU
+methodCateg=none indep joint
+overlapKillSmallestExpr=0 1
+
+colNames=id,form,lemma,upos,xpos,feats,head,deprel,deps,misc
+categories=IAV,IRV,LS.ICV,LVC.cause,LVC.full,MVC,VID,VPC.full,VPC.semi
+
+
