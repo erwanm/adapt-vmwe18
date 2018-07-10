@@ -1,0 +1,13 @@
+<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesLooseWrapper">
+	<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesForInternalNodesSetter">
+		<Argument>MP_slotE</Argument>
+	</AnnotationProcessor>
+	<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesLooseWrapper">
+		<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesForTextLeavesSetter">
+			<Argument>MP_slotL</Argument>
+		</AnnotationProcessor>
+		<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesForAttributesSetter">
+			<Argument>MP_slot</Argument>
+		</AnnotationProcessor>
+	</AnnotationProcessor>
+</AnnotationProcessor>

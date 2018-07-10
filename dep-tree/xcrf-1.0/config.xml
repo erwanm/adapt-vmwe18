@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crfXSD">xml/crf.xsd</entry>
+	<entry key="search">Riso</entry>
+	<entry key="iterMax">100</entry>
+	<entry key="XPath">Jaxen</entry>
+	<entry key="penalty">100000.0</entry>
+	<entry key="attributeAsNode">false</entry>
+	<entry key="annotationProcessorXSD">xml/annotationProcessor.xsd</entry>
+	<entry key="inputEncoding">UTF-8</entry>
+	<entry key="globalConstraintIterator">false</entry>
+	<entry key="prefixPreprocAttr">preproc_</entry>
+</properties>
+

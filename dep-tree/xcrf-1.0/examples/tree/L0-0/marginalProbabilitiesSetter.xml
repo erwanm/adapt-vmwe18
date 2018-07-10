@@ -1,0 +1,3 @@
+<AnnotationProcessor class="mostrare.tree.annotation.MarginalProbabilitiesForTextLeavesSetter">
+	<Argument>MP_slot</Argument>
+</AnnotationProcessor>

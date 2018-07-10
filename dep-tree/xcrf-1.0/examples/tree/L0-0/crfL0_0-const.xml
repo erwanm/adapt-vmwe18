@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Crf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../../../xml/crf.xsd"
+     type="tree">
+   <Labels emptyAnnotation="label_NOANN">
+      <Label value="NOANN" name="label_NOANN"/>
+      <Label value="club" name="label_club"/>
+      <Label value="league" name="label_league"/>
+      <Label value="season" name="label_season"/>
+      <Label value="round" name="label_round"/>
+      <Label value="date" name="label_date"/>
+      <Label value="rank" name="label_rank"/>
+      <Label value="points" name="label_points"/>
+      <Label value="wins" name="label_wins"/>
+      <Label value="draws" name="label_draws"/>
+      <Label value="losses" name="label_losses"/>
+      <Label value="gs" name="label_gs"/>
+      <Label value="gc" name="label_gc"/>
+      <Label value="gd" name="label_gd"/>
+   </Labels>
+   <SetsOfLabels>
+      <SetOfLabels labels="label_club label_league label_season label_round label_date label_rank label_points label_wins label_draws label_losses label_gs label_gc label_gd"
+                   name="set_Def"/>
+      <SetOfLabels labels="label_NOANN label_club label_league label_season label_round label_date label_rank label_points label_wins label_draws label_losses label_gs label_gc label_gd"
+                   name="set_All"/>
+   </SetsOfLabels>
+   <Constraints>
+      <Constraint xsi:type="Current-Parent-Constraint">
+         <Ycur value="set_All" xsi:type="SetOfLabels"/>
+         <Ypar xsi:type="SetOfLabels" value="set_Def"/>
+      </Constraint>
+   </Constraints>
+   <Features>
+      <Feature xsi:type="CurrentNode" name="pos = 1">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 2">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 3">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 4">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 5">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 6">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 7">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 8">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 9">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 10">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 11">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 12">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xsi:type="CurrentNode" name="pos = 13">
+         <Ycur xsi:type="SetOfLabels" value="set_Def"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+   </Features>
+</Crf>

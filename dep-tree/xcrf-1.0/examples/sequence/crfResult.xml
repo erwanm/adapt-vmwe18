@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Crf type="sequence">
+   <Labels>
+      <Label name="label_NumRoad" value="NumRoad"/>
+      <Label name="label_BidonDeux" value="BidonDeux"/>
+      <Label name="label_Road" value="Road"/>
+      <Label name="label_BidonQuatre" value="BidonQuatre"/>
+      <Label name="label_Town" value="Town"/>
+      <Label name="label_State" value="State"/>
+      <Label name="label_ZIPCode" value="ZIPCode"/>
+   </Labels>
+   <SetsOfLabels>
+      <SetOfLabels labels="label_NumRoad label_Road label_Town label_State label_ZIPCode"
+                   name="set_Def"/>
+      <SetOfLabels labels="label_Road label_Town" name="set_w"/>
+      <SetOfLabels labels="label_Road label_Town label_State" name="set_W"/>
+      <SetOfLabels labels="label_Road label_State" name="set_ww"/>
+      <SetOfLabels labels="label_NumRoad label_ZIPCode" name="set_D"/>
+   </SetsOfLabels>
+   <Features>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="NumRoad 1"
+               weight="21.68412843149777"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_NumRoad" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="NumRoad 1"
+               weight="1.5418543698308629"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_ZIPCode" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Road 1"
+               weight="19.46445082034954"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_Road" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+ ([a-zA-Z]+ )*[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Road 1"
+               weight="-3.319392764840261"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_Town" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+ ([a-zA-Z]+ )*[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Town 1"
+               weight="1.8575433106750836"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_Road" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Town 1"
+               weight="20.749570516007285"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_Town" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Town 1"
+               weight="2.641835650362348"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_State" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="State 1"
+               weight="-3.039375803351222"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_Road" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[A-Z]{2}.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="State 1"
+               weight="37.628302139744754"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_State" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[A-Z]{2}.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ZIPCode 1"
+               weight="-15.909118549796158"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_NumRoad" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]{5}.*"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ZIPCode 1"
+               weight="21.314458763808055"
+               xsi:type="FeatureSeq1">
+         <Yn value="label_ZIPCode" xsi:type="AnnotationLabel"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]{5}.*"/>
+      </Feature>
+   </Features>
+</Crf>

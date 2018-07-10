@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Crf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="sequence">
+   <Labels>
+      <Label value="NumRoad" name="label_NumRoad"/>
+      <Label value="BidonDeux" name="label_BidonDeux"/>
+      <Label value="Road" name="label_Road"/>
+      <Label value="BidonQuatre" name="label_BidonQuatre"/>
+      <Label value="Town" name="label_Town"/>
+      <Label value="State" name="label_State"/>
+      <Label value="ZIPCode" name="label_ZIPCode"/>
+   </Labels>
+   <SetsOfLabels>
+      <SetOfLabels labels="label_NumRoad label_Road label_Town label_State label_ZIPCode"
+                   name="set_Def"/>
+      <SetOfLabels labels="label_Road label_Town" name="set_w"/>
+      <SetOfLabels labels="label_Road label_Town label_State" name="set_W"/>
+      <SetOfLabels labels="label_Road label_State" name="set_ww"/>
+      <SetOfLabels labels="label_NumRoad label_ZIPCode" name="set_D"/>
+   </SetsOfLabels>
+   <Features>
+      <Feature xsi:type="CurrentToken" name="NumRoad 1">
+         <Ycur xsi:type="SetOfLabels" value="set_D"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]+.*"/>
+      </Feature>
+      <Feature xsi:type="CurrentToken" name="Road 1">
+         <Ycur xsi:type="SetOfLabels" value="set_w"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+ ([a-zA-Z]+ )*[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xsi:type="CurrentToken" name="Town 1">
+         <Ycur xsi:type="SetOfLabels" value="set_W"/>
+         <TestX value=".*"/>
+         <TestX value="[a-zA-Z]+.*"/>
+      </Feature>
+      <Feature xsi:type="CurrentToken" name="State 1">
+         <Ycur xsi:type="SetOfLabels" value="set_ww"/>
+         <TestX value=".*"/>
+         <TestX value="[A-Z]{2}.*"/>
+      </Feature>
+      <Feature xsi:type="CurrentToken" name="ZIPCode 1">
+         <Ycur xsi:type="SetOfLabels" value="set_D"/>
+         <TestX value=".*"/>
+         <TestX value="[0-9]{5}.*"/>
+      </Feature>
+   </Features>
+</Crf>

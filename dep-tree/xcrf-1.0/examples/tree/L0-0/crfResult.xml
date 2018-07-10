@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Crf type="tree">
+   <Labels emptyAnnotation="label_NOANN">
+      <Label name="label_NOANN" value="NOANN"/>
+      <Label name="label_club" value="club"/>
+      <Label name="label_league" value="league"/>
+      <Label name="label_season" value="season"/>
+      <Label name="label_round" value="round"/>
+      <Label name="label_date" value="date"/>
+      <Label name="label_rank" value="rank"/>
+      <Label name="label_points" value="points"/>
+      <Label name="label_wins" value="wins"/>
+      <Label name="label_draws" value="draws"/>
+      <Label name="label_losses" value="losses"/>
+      <Label name="label_gs" value="gs"/>
+      <Label name="label_gc" value="gc"/>
+      <Label name="label_gd" value="gd"/>
+   </Labels>
+   <SetsOfLabels>
+      <SetOfLabels labels="label_club label_league label_season label_round label_date label_rank label_points label_wins label_draws label_losses label_gs label_gc label_gd"
+                   name="set_Def"/>
+   </SetsOfLabels>
+   <Features>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="19.43425263539303"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 1"
+               weight="-1.2897720023785013"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 0"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="19.4342367499342"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 2"
+               weight="-1.289771723244155"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 1"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="19.434250908773514"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 3"
+               weight="-1.289771968244373"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 2"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="19.43425054723591"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 4"
+               weight="-1.2897718983130606"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 3"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="19.43422867296608"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 5"
+               weight="-1.2897714707071768"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 4"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="19.434255634933695"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 6"
+               weight="-1.2897711458843846"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 5"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="19.434253827776903"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 7"
+               weight="-1.2897716109678639"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 6"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="19.434242328655646"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 8"
+               weight="-1.2897711052995862"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 7"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="19.434261186254805"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 9"
+               weight="-1.289770914150286"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 8"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="19.43424938058248"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 10"
+               weight="-1.2897719698218324"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 9"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="19.43426558543291"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 11"
+               weight="-1.2897722341169406"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 10"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="19.434253367186617"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 12"
+               weight="-1.2897720028349327"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 11"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_club" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_league" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_season" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_round" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_date" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_rank" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_points" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_wins" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_draws" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_losses" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gs" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="-1.289772213072638"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gc" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+      <Feature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pos = 13"
+               weight="19.43425046185603"
+               xsi:type="CurrentNode">
+         <Ycur value="label_gd" xsi:type="Label"/>
+         <TestX value="./parent::*[name() = 'td']/parent::*[name() = 'tr']"/>
+         <TestX value="count(./parent::*[name() = 'td']/preceding-sibling::*[name() = 'td']) = 12"/>
+      </Feature>
+   </Features>
+</Crf>

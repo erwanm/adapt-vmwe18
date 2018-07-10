@@ -1,0 +1,153 @@
+
+/* généralités sur le document */
+
+body {
+
+  background-color: #567A7A;
+
+  color: #333333;
+
+  font-family : "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+
+  padding: 2em 2em 2em 2em;
+
+}
+
+
+
+
+/* la mise en page : le corps du document */
+
+div.pagelarge {
+
+  background-color: #CFE6E6;
+  color: inherit;
+
+  text-align: justify;
+
+  margin: 0em;
+
+  padding: 2em;
+
+  border: 1px solid #000000;
+}
+
+
+
+/* pied de page, encart, etc. */
+
+div.pied {
+
+  font-size: 80%;
+
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #598080;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+
+
+
+/* les liens hypertextes */
+
+a:link {
+  text-decoration: none;
+  color: #30BFBF;
+  background-color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #30BFBF;
+  background-color: inherit;
+}
+
+
+a:active {
+  text-decoration: none;
+  color: #30BFBF;
+  background-color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+
+
+
+/* les titres */
+
+h1 {
+
+  color: #567A7A;
+  background-color: inherit;
+
+  text-align: right;
+
+  font-weight:bold;
+  font-variant: small-caps;
+  font-size: 150%;
+  
+  border-bottom: 2px solid #567A7A;
+
+  text-transform: capitalize;
+
+}
+
+
+
+
+/* lists */
+
+
+li {
+  margin : 1em;
+  display: list-item;
+  list-style-image: url(plus.png);
+}
+
+
+
+
+/* les tableaux */
+
+table {
+
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  margin: 1em 0em 1em 0em;
+}
+
+
+th {
+  color: #CFE6E6;
+  font-weight:bold;
+  background-color: #598080;
+  border: 1px solid #000000;
+  padding: 0.2em;
+  font-variant: small-caps;
+  font-size: 90%;
+
+}
+
+td {
+  border: 1px solid #000000;
+  padding: 0.2em;
+  font-size: 90%;
+}
+
+
+img { 
+  border: 0;
+  vertical-align: middle;
+}
+
+
+
+

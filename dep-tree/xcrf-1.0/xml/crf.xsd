@@ -1,0 +1,430 @@
+<!--
+  Copyright (C) 2006 MOSTRARE INRIA Project
+  
+  This file is part of XCRF, an implementation of CRFs for trees (http://treecrf.gforge.inria.fr)
+  
+  XCRF is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+ 
+  XCRF is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with XCRF; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:element name="Crf" type="CRFType"/>
+	<xsd:element name="Labels" type="LabelList">
+		<xsd:unique name="LabelsUnique">
+			<xsd:selector xpath="Label"/>
+			<xsd:field xpath="@value"/>
+		</xsd:unique>
+	</xsd:element>
+	<xsd:element name="Label" type="LabelType"/>
+	<xsd:element name="SetsOfLabels" type="SetOfLabelsList"/>
+	<xsd:element name="SetOfLabels" type="SetOfLabelsType"/>
+	<xsd:element name="Constraints" type="ConstraintsType"/>
+	<xsd:element name="Constraint" type="ConstraintType"/>
+	<xsd:element name="ConstraintPredicate" type="ConstraintPredicateType"/>
+	<xsd:element name="Features" type="FeatureList"/>
+	<xsd:element name="Feature" type="FeatureType"/>
+	<xsd:element name="FeatureValue" type="FeatureValueType"/>
+	<xsd:element name="Ycur" type="AnnotationType"/>
+	<xsd:element name="Yprev" type="AnnotationType"/>
+	<xsd:element name="Ypar" type="AnnotationType"/>
+	<xsd:element name="Ysib" type="AnnotationType"/>
+	<xsd:element name="TestX" type="TestXType"/>
+
+	<!-- 
+		A CRF is composed of a list of labels, a list of sets
+		of labels and a list of features.  It has an attribute
+		"type" that specifies its type (tree, sequence or
+		mixt).
+	-->
+	<xsd:complexType name="CRFType">
+		<xsd:sequence>
+			<xsd:element ref="Labels"/>
+			<xsd:element ref="SetsOfLabels" minOccurs="0"/>
+			<xsd:element ref="Constraints" minOccurs="0"/>
+			<xsd:element ref="Features"/>
+		</xsd:sequence>
+		<xsd:attribute name="type" type="CRFStructure" use="required"/>
+	</xsd:complexType>
+	
+	<!--
+		A list of labels may specify one of its labels as an
+		empty annotation.  This list can't be empty.
+	-->
+	<xsd:complexType name="LabelList">
+		<xsd:sequence>
+			<xsd:element ref="Label" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="emptyAnnotation" type="LabelIDREF" use="optional"/>
+	</xsd:complexType>
+	
+	<!--
+		A label is described by a name and a value.
+		Its name is used as an ID.
+	-->
+	<xsd:complexType name="LabelType">
+		<xsd:attribute name="name" type="LabelID" use="required"/>
+		<xsd:attribute name="value" type="LabelValue" use="required"/>
+	</xsd:complexType>
+	
+	<!--
+	        The list can be empty.
+	-->
+	<xsd:complexType name="SetOfLabelsList">
+		<xsd:sequence>
+			<xsd:element ref="SetOfLabels" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--
+		A set of labels is described by a name and a list of
+		references to labels.  Its name is used as an ID.
+	-->
+	<xsd:complexType name="SetOfLabelsType">
+		<xsd:attribute name="name" type="SetID" use="required"/>
+		<xsd:attribute name="labels" type="LabelIDREFS" use="required"/>
+	</xsd:complexType>
+	
+	<!-- 
+	     Constraints
+	     ===========
+	-->
+	<xsd:complexType name="ConstraintsType">
+		<xsd:sequence>
+			<xsd:element ref="Constraint" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConstraintType" abstract="true">
+		<xsd:sequence>
+			<xsd:element ref="ConstraintPredicate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CurrentNode-Constraint">
+		<xsd:complexContent>
+			<xsd:extension base="ConstraintType">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Current-Parent-Constraint">
+		<xsd:complexContent>
+			<xsd:extension base="ConstraintType">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ypar"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Current-Sibling-Constraint">
+		<xsd:complexContent>
+			<xsd:extension base="ConstraintType">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ysib"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="Current-Parent-Sibling-Constraint">
+		<xsd:complexContent>
+			<xsd:extension base="ConstraintType">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ypar"/>
+					<xsd:element ref="Ysib"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConstraintPredicateType">
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+
+	<!-- Features 
+	     ========
+	-->
+
+	<!--
+		A list of features can't be empty.
+		-->
+	<xsd:complexType name="FeatureList">
+		<xsd:sequence>
+			<xsd:element ref="Feature" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--
+		This type describes the common part of every features.
+		A feature has a name, a weight (defaut value:0.0) and a type(tree or sequence).
+		The weight is optional (useful in the learning step).
+		-->
+	<xsd:complexType name="FeatureType" abstract="true">
+		<xsd:sequence>
+			<xsd:element ref="FeatureValue" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="weight" type="xsd:double" use="optional" default="0.0"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="FeatureValueType">
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="FeatureTree" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureType">
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="FeatureSeq" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureType">
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+
+	<!-- 
+	     
+	     The case of trees : 
+	     
+	   
+	     Every feature is evaluated at a current node of the tree.
+             A feature is defined by at least one test.
+	     A test is an XPath expression relative to
+	     the current node.  
+	     -->
+	       
+	<!-- This type describes a feature relative to only a current
+	     node.  It has an annotation test and a set of structure
+	     tests (this set can be empty).  
+	  -->
+	<xsd:complexType name="CurrentNode">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureTree">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="TestX" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<!--  This type describes a feature relative to a current
+	      node and its sibling node.  It has two annotation tests (for the two
+	      children) and a set of structure tests (this set can
+	      be empty).  
+	  -->
+	<xsd:complexType name="Current-Sibling">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureTree">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ysib"/>
+					<xsd:element ref="TestX" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!--  This type describes a feature relative to a current
+	      node and its parent.  It has two annotation tests and a set of
+	      structure tests (this set can be empty).
+	  -->
+	<xsd:complexType name="Current-Parent">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureTree">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ypar"/>
+					<xsd:element ref="TestX" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- This type describes a feature relative to a current node,
+	     its parent and its sibling.  It has three annotation
+	     tests and a set of structure tests (this set can be
+	     empty).  
+	  -->
+	<xsd:complexType name="Current-Parent-Sibling">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureTree">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Ypar"/>
+					<xsd:element ref="Ysib"/>
+					<xsd:element ref="TestX" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<!--
+
+	     The case of sequences :
+
+
+             Every feature is evaluated at a current token of the
+             sequence.
+
+             A feature is defined by exactly two tests. The first one
+	     is a regular expression applied to the sequence up to the
+	     current token. The second one is a regular expression
+	     applied to the sequence from the current token to the
+             end of the sequence.
+             -->
+
+
+	<xsd:complexType name="CurrentToken">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureSeq">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="TestX" minOccurs="2" maxOccurs="2"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Token-PrevToken">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureSeq">
+				<xsd:sequence>
+					<xsd:element ref="Ycur"/>
+					<xsd:element ref="Yprev"/>
+					<xsd:element ref="TestX" minOccurs="2" maxOccurs="2"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+		
+	<!--
+		This type describes the common part of every annotation tests.
+		An annotation test has a value that refers to a label or to a set of labels.
+		-->
+	<xsd:complexType name="AnnotationType" abstract="true">
+		<xsd:attribute name="value" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	
+	<!--
+		The value of this annotation test refers to a label.
+		-->
+	<xsd:complexType name="Label">
+		<xsd:complexContent>
+			<xsd:restriction base="AnnotationType">
+				<xsd:attribute name="value" type="LabelIDREF" use="required"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!--
+		The value of this annotation test refers to a set of labels.
+		-->
+	<xsd:complexType name="SetOfLabels">
+		<xsd:complexContent>
+			<xsd:restriction base="AnnotationType">
+				<xsd:attribute name="value" type="SetIDREF" use="required"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!--
+		This type describes a structure test.
+		The value of this test is a string (an XPath expression or a regular expression according to the type of the feature this structure test belongs to).
+		-->
+	<xsd:complexType name="TestXType">
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<!--
+		A label ID starts with "label_" and ends with a non-empty string composed of letters.
+		-->
+	<xsd:simpleType name="LabelID">
+		<xsd:restriction base="xsd:ID">
+			<xsd:pattern value="label_[a-zA-Z0-9_\-]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		A label IDREF starts with "label_" and ends with a non-empty string composed of letters.
+		-->
+	<xsd:simpleType name="LabelIDREF">
+		<xsd:restriction base="xsd:IDREF">
+			<xsd:pattern value="label_[a-zA-Z0-9_\-]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		An ID for a set of labels starts with "set_" and ends with a non-empty string composed of letters.
+		-->
+	<xsd:simpleType name="SetID">
+		<xsd:restriction base="xsd:ID">
+			<xsd:pattern value="set_[a-zA-Z0-9_\-]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		An IDREF for a set of labels starts with "set_" and ends with a non-empty string composed of letters.
+		-->
+	<xsd:simpleType name="SetIDREF">
+		<xsd:restriction base="xsd:IDREF">
+			<xsd:pattern value="set_[a-zA-Z0-9_\-]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		IDREFS to labels.
+		-->
+	<xsd:simpleType name="LabelIDREFS">
+		<xsd:restriction base="xsd:IDREFS">
+			<xsd:pattern value="label_[a-zA-Z0-9_\-]+( label_[a-zA-Z0-9_\-]+)*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		This type describes the possible types of a CRF (tree, sequence or mixt).
+		-->
+	<xsd:simpleType name="CRFStructure">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="tree"/>
+			<xsd:enumeration value="sequence"/>
+			<xsd:enumeration value="mixt"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--
+		This type specifies that the value of a label is a non-empty string filled with letters.
+		-->
+	<xsd:simpleType name="LabelValue">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-zA-Z0-9_\-]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

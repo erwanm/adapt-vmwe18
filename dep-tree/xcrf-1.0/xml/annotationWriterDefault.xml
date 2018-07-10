@@ -1,0 +1,18 @@
+<AnnotationProcessor
+	class="mostrare.tree.annotation.AnnotationWriterLooseWrapper">
+		<AnnotationProcessor
+		class="mostrare.tree.annotation.AttributeForInternalNodeAnnotationWriter">
+			<Argument>slot</Argument>
+		</AnnotationProcessor>
+	<AnnotationProcessor
+		class="mostrare.tree.annotation.AnnotationWriterLooseWrapper">
+		<AnnotationProcessor
+			class="mostrare.tree.annotation.AttributeForTextLeavesAnnotationWriter">
+			<Argument>slotL</Argument>
+		</AnnotationProcessor>
+	<AnnotationProcessor
+			class="mostrare.tree.annotation.AttributeForAttributesAnnotationWriter2">
+		<Argument>slot</Argument>
+	</AnnotationProcessor>
+	</AnnotationProcessor>
+</AnnotationProcessor>

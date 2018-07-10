@@ -1,0 +1,41 @@
+<!-- 
+	Annotations for element nodes: slotE="label"
+	Annotations for text nodes: slotL="label1 label2" for two text nodes
+	Annotations for attribute node named attr: slot_attr="label"
+-->
+<AnnotationProcessor
+	class="mostrare.tree.annotation.AnnotationReaderAllAndWrapper">
+	<AnnotationProcessor
+		class="mostrare.tree.annotation.AnnotationReaderLooseWrapper">
+		<AnnotationProcessor
+			class="mostrare.tree.annotation.InitAttributesAnnotationReader">
+		</AnnotationProcessor>
+		<AnnotationProcessor
+			class="mostrare.tree.annotation.AttributeForAttributesAnnotationReader2">
+			<Argument>slot</Argument>
+		</AnnotationProcessor>
+	</AnnotationProcessor>
+	<AnnotationProcessor
+		class="mostrare.tree.annotation.AnnotationReaderAllAndWrapper">
+		<AnnotationProcessor
+			class="mostrare.tree.annotation.AnnotationReaderLooseWrapper">
+			<AnnotationProcessor
+				class="mostrare.tree.annotation.InitTextLeavesAnnotationReader">
+			</AnnotationProcessor>
+			<AnnotationProcessor
+				class="mostrare.tree.annotation.AttributeForTextLeavesAnnotationReader">
+				<Argument>slotL</Argument>
+			</AnnotationProcessor>
+		</AnnotationProcessor>
+		<AnnotationProcessor
+			class="mostrare.tree.annotation.AnnotationReaderStrictWrapper">
+			<AnnotationProcessor
+				class="mostrare.tree.annotation.AttributeForInternalNodeAnnotationReader">
+				<Argument>slot</Argument>
+			</AnnotationProcessor>
+			<AnnotationProcessor
+				class="mostrare.tree.annotation.InitInternalNodesAnnotationReader">
+			</AnnotationProcessor>
+		</AnnotationProcessor>
+	</AnnotationProcessor>
+</AnnotationProcessor>
