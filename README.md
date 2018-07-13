@@ -82,6 +82,19 @@ train-test-class-method.sh -o "-j '-Xms32g -Xmx32g' -x /path/to/xcrf-1.0/" ...
 
 #### Multiple config files and datasets
 
+Scripts are provided to allow batch processing. In order to train and test the system each time with a distinct config file and dataset, the script `process-multiple-datasets.sh` can be used to generate the commands to run. This way the tasks can be started in parallel or any way convenient, ideally on a cluster.
+
+```
+# generate a few config files
+mkdir configs; echo dep-tree/conf/basic.multi-conf | expand-multi-config.pl configs/
+# generate the command to train and test for each dataset and each config file
+process-multiple-datasets.sh sharedtask-data/1.1/ configs results >tasks
+# split to run 10 processes in parallel
+split -d -l 6 tasks batch.
+# run 
+for f in batch.*; do (bash $f &); done
+```
+
 ### Sequential approach
 
 ## Details
@@ -91,8 +104,8 @@ train-test-class-method.sh -o "-j '-Xms32g -Xmx32g' -x /path/to/xcrf-1.0/" ...
 The scripts are meant to be used with configuration files which contain values for the parameters. Examples can be found in the directory `conf`. Additionally, a batch of configuration files can be generated using e.g.:
 
 ```
-# caution: generates a set of config files (written to directory 'configs')
-mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl configs
+# generates a set of config files (written to directory 'configs')
+mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl configs/
 ```
 
 In order to generate a different set of configurations, either customize the values that a parameter can take in `conf/options.multi-conf` or use the `-r` option to generate a random subset of config files, e.g.:
@@ -101,6 +114,10 @@ In order to generate a different set of configurations, either customize the val
 # generate a random 50 config files
 mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl -r 50 configs
 ```
+
+
+### Conversion to/from BIO format
+
 
 
 
