@@ -140,5 +140,10 @@ cupt-to-bio-labels IO sharedtask-data/1.1/FR/train.cupt fr-train.io
 
 #### From sequential labelling scheme (e.g. BIO) to cupt
 
+```
+bio-to-cupt-labels fr-train.io fr-train.cupt
+```
+
+* See also `merge-independent-labels` in order to merge categories back together after predicting them independently.
 
 
