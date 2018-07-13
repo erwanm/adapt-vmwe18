@@ -17,7 +17,9 @@ function usage {
   echo
   echo "Usage: $progName [options] <input data dir> <configs file or dir> <output dir>"
   echo
-  echo "  prints tasks to execute."
+  echo "  Batch process the training/testing process for all the datasets in "
+  echo "  <input data dir> with all the config files in <configs file or dir>."
+  echo "  The tasks to execute are printed to STDOUT."
   echo 
   echo " <input data dir>: contains subdirectories by language, e.g."
   echo "    <input data dir>/FR/train.cupt"
