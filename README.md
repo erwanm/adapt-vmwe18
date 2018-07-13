@@ -97,6 +97,20 @@ for f in batch.*; do (bash $f &); done
 
 ### Sequential approach
 
+
+#### Generating multiple configuration files
+
+```
+crf-generate-multi-config.pl  3:8:3:1:1:C 4:8:5:1:1:C >seq.multi-conf
+echo "labels=IO BIO BILOU" >>seq.multi-conf
+mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl configs/
+```
+
+* Columns 3 and 4 represent the lemma and POS tag, respectively.
+
+
+#### 
+
 ## Details
 
 ### Configuration files
@@ -145,5 +159,7 @@ bio-to-cupt-labels fr-train.io fr-train.cupt
 ```
 
 * See also `merge-independent-labels` in order to merge categories back together after predicting them independently.
+
+
 
 
