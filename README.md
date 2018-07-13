@@ -2,8 +2,6 @@
 
 *Authors: Erwan Moreau, Ashjan Alsulaimani and Alfredo Maldonado*
 
-*Content coming soon (ETA: mid-July 2018)*
-
 ## Links
 
 * [Shared task website](http://multiword.sourceforge.net/PHITE.php?sitesig=CONF&page=CONF_05_MWE_2017___lb__EACL__rb__)
@@ -55,24 +53,47 @@ This will compile the code if needed and add the relevant directories to `PATH`.
 
 ### Dependency tree approach
 
-#### Training
+#### Simple training + testing
 
 From the directory `dep-tree`:
 
 ```
-train-test-class-method.sh -l sharedtask-data/1.1/FR/train.cupt conf/minimal.conf model-dir output-dir
+train-test-class-method.sh -l sharedtask-data/1.1/FR/train.cupt -a sharedtask-data/1.1/FR/dev.cupt conf/minimal.conf model output
 ```
 
+* `-l` "learn" option: indicates to perform training from the specified file
+* `-a` "apply" option: indicates to perform testing on the specified file
+* using configuration file `conf/minimal.conf` (see *Configuration files* in section *Details* below)
+* `model` will contain the model at the end of the process
+* `output` is the "work directory"; at the end of the testing process it contains:
+  * The predictions stored in `<work dir>/predictions.cupt`
+  * Evaluation results are stored in `<work dir>/eval.out` if `-e` is used (see below).
+* if option `-a` is supplied, `-e <training file>` can be used to perfom evaluation. The training file is required in order for the script (provided by the organizers) to count the cases seen in the training data.
 * To run the script from a different directory, one has to provide the path to the XCRF directory in the following way:
 ```
 train-test-class-method.sh -o '-x dep-tree/xcrf-1.0/' -l sharedtask-data/1.1/FR/train.cupt dep-tree/conf/minimal.conf model-dir output-dir
 ```
 
-#### Testing
+**CAUTION: RAM ISSUES.** XCRF requires a lot of memory. Depending on the amount of training data, the number of features and the "clique level" option, it might crash even with as much as 64GB. Memory options can be passed to the Java VM (XCRF is implemented in Java) through option `-o`:
 
-* See `-o` above to run the script from a different directory.
+```
+train-test-class-method.sh -o "-j '-Xms32g -Xmx32g' -x /path/to/xcrf-1.0/" ...
+```
 
 #### Multiple config files and datasets
+
+Scripts are provided to allow batch processing. In order to train and test the system each time with a distinct config file and dataset, the script `process-multiple-datasets.sh` can be used to generate the commands to run. This way the tasks can be started in parallel or any way convenient, ideally on a cluster.
+
+```
+# generate a few config files
+mkdir configs; echo dep-tree/conf/basic.multi-conf | expand-multi-config.pl configs/
+# generate the command to train and test for each dataset and each config file
+process-multiple-datasets.sh sharedtask-data/1.1/ configs results >tasks
+# split to run 10 processes in parallel
+split -d -l 6 tasks batch.
+# run 
+for f in batch.*; do (bash $f &); done
+```
 
 ### Sequential approach
 
@@ -83,8 +104,8 @@ train-test-class-method.sh -o '-x dep-tree/xcrf-1.0/' -l sharedtask-data/1.1/FR/
 The scripts are meant to be used with configuration files which contain values for the parameters. Examples can be found in the directory `conf`. Additionally, a batch of configuration files can be generated using e.g.:
 
 ```
-# caution: generates a set of config files (written to directory 'configs')
-mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl configs
+# generates a set of config files (written to directory 'configs')
+mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl configs/
 ```
 
 In order to generate a different set of configurations, either customize the values that a parameter can take in `conf/options.multi-conf` or use the `-r` option to generate a random subset of config files, e.g.:
@@ -93,6 +114,10 @@ In order to generate a different set of configurations, either customize the val
 # generate a random 50 config files
 mkdir configs; echo dep-tree/conf/large.multi-conf | expand-multi-config.pl -r 50 configs
 ```
+
+
+### Conversion to/from BIO format
+
 
 
 
