@@ -219,9 +219,9 @@ if [ ! -z "$testFile" ]; then # features for testing
   
     if [ ! -z "$evalTrain" ]; then
 	echo "Evaluating"
-	command="evaluate.py --gold \"$testFile\" --pred \"$workDir/predictions.cupt\" >\"$workDir/eval.out\""
-	evalSafe "$command"
-	command="evaluate.py --train \"$evalTrain\" --gold \"$testFile\" --pred \"$workDir/predictions.cupt\" >\"$workDir/eval.long.out\""
+#	command="evaluate.py --gold \"$testFile\" --pred \"$workDir/predictions.cupt\" >\"$workDir/eval.out\""
+#	evalSafe "$command"
+	command="evaluate.py --train \"$evalTrain\" --gold \"$testFile\" --pred \"$workDir/predictions.cupt\" >\"$workDir/eval.out\""
 	evalSafe "$command"
     fi
 
