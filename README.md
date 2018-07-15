@@ -61,6 +61,7 @@ From the directory `dep-tree`:
 train-test-class-method.sh -l sharedtask-data/1.1/FR/train.cupt -a sharedtask-data/1.1/FR/dev.cupt conf/minimal.conf model output
 ```
 
+* `sharedtask-data` is the directory containing the official shared task data, as its name suggests (see link above); replace with the appropriate path.
 * `-l` "learn" option: indicates to perform training from the specified file
 * `-a` "apply" option: indicates to perform testing on the specified file
 * using configuration file `conf/minimal.conf` (see *Configuration files* in section *Details* below)
@@ -99,21 +100,47 @@ for f in batch.*; do (bash $f &); done
 
 #### Simple training and testing
 
-
-
-
-#### Generating multiple configuration files
+From the directory `seq`:
 
 ```
-crf-generate-multi-config.pl  3:8:3:1:1:C 4:8:5:1:1:C >seq.multi-conf
+seq-train-test.sh -l sharedtask-data/1.1/FR/train.cupt -a sharedtask-data/1.1/FR/test.cupt -e sharedtask-data/1.1/FR/train.cupt conf/example.conf model output
+```
+
+* `sharedtask-data` is the directory containing the official shared task data, as its name suggests (see link above); replace with the appropriate path.
+* `-l` "learn" option: indicates to perform training from the specified file
+* `-a` "apply" option: indicates to perform testing on the specified file
+* using configuration file `conf/example.conf` (see *Configuration files* in section *Details* below)
+* `model` will contain the model at the end of the process
+* `output` is the "work directory"; at the end of the testing process it contains:
+  * The predictions stored in `<work dir>/predictions.cupt`
+  * Evaluation results are stored in `<work dir>/eval.out` if `-e` is used (see below).
+* if option `-a` is supplied, `-e <training file>` can be used to perfom evaluation. The training file is required in order for the script (provided by the organizers) to count the cases seen in the training data.
+
+
+#### Multiple config files and datasets
+
+Generating multiple configuration files:
+
+```
+crf-generate-multi-config.pl  3-4:8:5:1:1:C  >seq.multi-conf
 echo "labels=IO BIO BILOU" >>seq.multi-conf
 mkdir configs; echo seq.multi-conf | expand-multi-config.pl configs/
 ```
 
 * Columns 3 and 4 represent the lemma and POS tag, respectively.
+* Alternatively, each column (feature) can be given separately, e.g.: `crf-generate-multi-config.pl  3:6:2:1:1:C 4:8:5:1:1:C  >seq.multi-conf`
+  * This allows the combination of different patterns for each column so it might improve the model, but at the cost of multiplying the number of combinations (hence increasing the computation time).
 
+Generating the commands and executing the tasks in parallel:
 
-#### 
+```
+seq-multi.sh -e  -t test.cupt sharedtask-data/1.1/ configs/ expe >tasks
+# split to run processes in parallel
+split -d -l 700 tasks batch.
+# run 
+for f in batch.*; do (bash $f &); done
+```
+
 
 ## Details
 
