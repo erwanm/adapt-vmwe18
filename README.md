@@ -192,5 +192,14 @@ bio-to-cupt-labels fr-train.io fr-train.cupt
 * See also `merge-independent-labels` in order to merge categories back together after predicting them independently.
 
 
+### Collecting results
 
+Scripts are provided to collect results from a large experiment with multiple datasets and configurations, and store the results is tab-separated file with columns representing the parameters in the config file. The resulting file can then be analyzed more easily.
+
+```
+echo -e "configs\tresults" | collect-results-multiple-experiments.sh  results.tsv
+```
+
+* `configs` is the directory containing the set of config files used in the experiment (see above).
+* `results` is the output directory, which must contain a file `results/<dataset>/<config>/eval.out` generated at the end of the training+testing process for each case.
 
