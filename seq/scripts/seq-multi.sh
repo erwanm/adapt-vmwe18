@@ -137,7 +137,8 @@ for langDir in "$inputDir"/*; do
 		if [ ! -z "$evaluate" ]; then
 		    params="$params  -e  \"$langDir/$trainFile\""
 		fi
-		command="seq-train-test.sh $params -l \"$langDir/$trainFile\" -a  \"$langDir/$testFile\" \"$configFile\" \"$outDir/model\" \"$outDir\" >$outDir/out 2>$outDir/err"
+#		command="seq-train-test.sh $params -l \"$langDir/$trainFile\" -a  \"$langDir/$testFile\" \"$configFile\" \"$outDir/model\" \"$outDir\" >$outDir/out 2>$outDir/err"
+		command="seq-train-test.sh $params -a  \"$langDir/$testFile\" \"$configFile\" \"$outDir/model\" \"$outDir\" >$outDir/out 2>$outDir/err"
 		echo "$command"
 	    else
 		echo "$lang/$configId already done, skipping" 1>&2

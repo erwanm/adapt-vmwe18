@@ -101,14 +101,11 @@ if [ ! -z "$testFile" ]; then # features for testing
     checkFile "$testFile"
     labels=$(getConfigParam labels "$configFile")
 
-    cat "$testFile" | grep -v "^#" | tr ' ' '_'  >"$workDir/test-input.cupt"
+    # "cut -f 1-10" to remove gold label column
+    cat "$testFile" | grep -v "^#" | tr ' ' '_'  | cut -f 1-10 >"$workDir/test-input.cupt"
     
-    echo "Converting test data to '$labels' labels..."
-    command="cupt-to-bio-labels -i $labels \"$workDir/test-input.cupt\" \"$workDir/test-input.bio\""
-    eval "$command"
-
     echo "Applying..."
-    eval "crf-config-test.sh  \"$configFile\"  \"$modelFile\" \"$workDir/test-input.bio\" \"$workDir/test-output.bio\""
+    eval "crf-config-test.sh  \"$configFile\"  \"$modelFile\" \"$workDir/test-input.cupt\" \"$workDir/test-output.bio\""
     eval "$command"
 
     echo "Converting from '$labels' labels to cupt format..."
@@ -117,7 +114,8 @@ if [ ! -z "$testFile" ]; then # features for testing
 
     # reinjecting first line with columns labels
     head -n 1 "$testFile" >"$workDir/predictions.cupt"
-    cut -f 1-10,12 "$workDir/predictions.cupt.0" >>"$workDir/predictions.cupt"
+    cat "$workDir/predictions.cupt.0" >>"$workDir/predictions.cupt"
+
     
     echo "Checking cupt output"
     command="validate_cupt.py --input \"$workDir/predictions.cupt\""
