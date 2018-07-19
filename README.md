@@ -203,3 +203,8 @@ echo -e "configs\tresults" | collect-results-multiple-experiments.sh  results.ts
 * `configs` is the directory containing the set of config files used in the experiment (see above).
 * `results` is the output directory, which must contain a file `results/<dataset>/<config>/eval.out` generated at the end of the training+testing process for each case.
 
+Example: extracting best performance by language (based on results collected from sequential approach experiments)
+
+```
+for f in sharedtask-data/1.1/??; do l=$(basename $f); cat results.tsv | grep $l | grep Tok | sort -k 14,14n | tail -n 1 | cut -f 2,3,4,8,913,14; done
+```
